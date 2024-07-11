@@ -41,5 +41,5 @@ Welcome to the **Jelly Beans Game**! This fun and interactive guessing game is b
 ## Author
 
 **Dhruvi Lad**  
-[GitHub Profile](https://github.com/yourusername)  
+[GitHub Profile](https://github.com/dhruvi1930)  
 [Email](mailto:dhruvihl369@gmail.com)
