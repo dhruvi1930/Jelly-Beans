@@ -11,6 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 
 .container {
@@ -18,21 +19,28 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-  width: 400px;
-  margin: 0 auto;
+  width: 200px;
+  margin-bottom: 20px;
 }
 
 .container h1 {
-  color: #fff;
+  color: #333;
   margin-bottom: 30px;
+  text-align: center;
 }
 
-.play-btn {
+.play-btn,
+.start-btn,
+.submit-btn,
+.discover-btn {
   font-size: 15px;
   font-weight: 700;
   padding: 10px 50px;
@@ -41,4 +49,80 @@ body {
   color: #fff;
   background: #400080;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.play-btn:hover,
+.start-btn:hover,
+.submit-btn:hover,
+.discover-btn:hover {
+  background: #340066;
+}
+
+.player-section,
+.data-container,
+.display,
+.discover-btn {
+  display: none;
+}
+
+.player-section.active,
+.data-container.active,
+.discover-btn.active {
+  display: flex;
+}
+
+.player-section,
+.data-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.input-form label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.display {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-entry {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
